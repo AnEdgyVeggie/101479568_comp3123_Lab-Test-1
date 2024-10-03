@@ -18,7 +18,7 @@ try {
         let folderContents = filesystem.readdirSync(logsDirPath)
         console.log("CREATED ================")
         folderContents.forEach(file => {
-            console.log(file)
+            console.log("created: " + file)
         })
     }
 
@@ -27,7 +27,7 @@ try {
         let folderContents = filesystem.readdirSync(logsDirPath)
         console.log("DELETING ===============")
         folderContents.forEach(file => {
-            console.log(file)
+            console.log("delete: " + file)
             filesystem.unlink(`${logsDirPath}/${file}`, (err) => {
                 if (err !== null) {
                     console.log("There was an issue deleting a file: " + err)
